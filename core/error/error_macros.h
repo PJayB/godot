@@ -78,7 +78,7 @@ void _err_flush_stdout();
 #define FUNCTION_STR __FUNCTION__
 #endif
 
-#ifdef _MSC_VER
+#if defined(_MSC_VER) || defined(__MINGW32__)
 /**
  * Don't use GENERATE_TRAP() directly, should only be used be the macros below.
  */
