@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Build Windows Debug",
+			"command": "scons",
+			"args": [
+				"platform=windows", "use_mingw=yes", "debug_symbols=true"
+			],
+			"options": {
+				"cwd": "${workspaceRoot}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: gcc"
+		}
+	]
+}
