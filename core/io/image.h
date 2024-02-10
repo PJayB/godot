@@ -69,8 +69,8 @@ public:
 	static SaveWebPBufferFunc save_webp_buffer_func;
 
 	enum {
-		MAX_WIDTH = (1 << 24), // force a limit somehow
-		MAX_HEIGHT = (1 << 24), // force a limit somehow
+		MAX_WIDTH = 8192, // force a limit somehow
+		MAX_HEIGHT = 8192, // force a limit somehow
 		MAX_PIXELS = 268435456
 	};
 

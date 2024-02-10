@@ -743,6 +743,10 @@ LightmapGI::BakeError LightmapGI::bake(Node *p_from_node, String p_image_data_pa
 			}
 
 			lightmap_size *= mf.lightmap_scale;
+
+			// Clamp to the max supported image size
+			lightmap_size = lightmap_size.min(Size2i(Image::MAX_WIDTH, Image::MAX_HEIGHT));
+
 			TypedArray<RID> overrides;
 			overrides.resize(mf.overrides.size());
 			for (int i = 0; i < mf.overrides.size(); i++) {
